@@ -1,0 +1,8 @@
+prefix=/home/pc/Desktop/dev_ws/devel
+
+Name: robot_controller
+Description: Description of robot_controller
+Version: 0.0.0
+Cflags: -I/home/pc/Desktop/dev_ws/src/robot_core/robot_controller/include
+Libs: -L${prefix}/lib -lrobot_controller
+Requires: controller_interface controller_manager hardware_interface pluginlib roscpp

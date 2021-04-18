@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="wheel_fixed" params="parent">
+
+        <link name="wheel_fixed">
+            <inertial>
+                <xacro:sphere_inertia m="0.4" r="0.2"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <sphere radius="0.2"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="0.2"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="wheel_fixed_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="wheel_fixed"/>
+            <origin xyz="-0.3 0.0 -0.1" rpy="0.0 0.0 0.0"/>
+        </joint>
+        
+    </xacro:macro>
+</robot>

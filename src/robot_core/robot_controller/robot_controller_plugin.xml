@@ -1,0 +1,10 @@
+<library path="lib/librobot_controller">
+
+  <class name="robot_controller/RobotController" type="robot_controller::RobotController" 
+          base_class_type="controller_interface::ControllerBase">
+      <description>
+        DiffDrive for two wheeled robots
+      </description>
+  </class>
+
+</library>

@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/opt/ros/noetic/include/**",
+                "/home/pc/Desktop/dev_ws/src/robot_sim/robot_gazebo/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/robot_core/robot_controller/include"
+            ],
+            "name": "ROS"
+        }
+    ],
+    "version": 4
+}

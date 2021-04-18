@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+
+    <!-- ##### PLUGINS ##### -->
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/robot</robotNamespace>
+        </plugin>
+    </gazebo>
+
+    <!-- ##### INCLUDES ##### -->
+    <xacro:include filename="$(find robot_description)/urdf/extras/variables.xacro"/>
+    <xacro:include filename="$(find robot_description)/urdf/extras/inertias.xacro"/>
+    <xacro:include filename="$(find robot_description)/urdf/extras/components.xacro"/>
+    <xacro:include filename="$(find robot_description)/urdf/elements/wheel.xacro"/>
+
+    <!-- ##### LINKS ##### -->
+
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <xacro:box_inertia m="3.0" x="1.0" y="0.25" z="0.6"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="1.0 0.6 0.25"/>
+                <material name="red"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="1.0 0.6 0.25"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <!-- ##### WHEELS ##### -->
+
+    <xacro:wheel suffix="FL" parent="base_link" reflectX="1" reflectY="1"/>
+    <xacro:wheel suffix="FR" parent="base_link" reflectX="1" reflectY="-1"/>
+]
+
+    <xacro:wheel_fixed parent="base_link"/>
+
+
+</robot>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find robot_gazebo)/launch/spawn_world.launch"/>
+    <include file="$(find robot_gazebo)/launch/spawn_robot.launch"/>
+    <include file="$(find robot_control)/launch/spawn_control.launch"/>
+</launch>

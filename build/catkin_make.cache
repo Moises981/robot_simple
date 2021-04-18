@@ -1,0 +1,2 @@
+robot_core/robot_controller:robot_sim/robot_control:robot_sim/robot_description:robot_sim/robot_gazebo:robot_sim/robot_rviz
+-DCATKIN_DEVEL_PREFIX=/home/pc/Desktop/dev_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pc/Desktop/dev_ws/install -G Unix Makefiles

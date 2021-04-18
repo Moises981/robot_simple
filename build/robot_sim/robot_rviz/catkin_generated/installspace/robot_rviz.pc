@@ -1,0 +1,8 @@
+prefix=/home/pc/Desktop/dev_ws/install
+
+Name: robot_rviz
+Description: Description of robot_rviz
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

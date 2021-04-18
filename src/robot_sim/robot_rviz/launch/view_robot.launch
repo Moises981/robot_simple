@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find robot_description)/launch/description.launch"/>
+    <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find robot_rviz)/rviz/view_robot.rviz"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+</launch>
